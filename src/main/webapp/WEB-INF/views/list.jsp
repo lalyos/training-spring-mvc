@@ -1,5 +1,4 @@
 <%@taglib tagdir="/WEB-INF/tags" prefix="l" %>
-<%@taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
 
 <h1>list of foods</h1>
 <table border="1">
@@ -34,7 +33,7 @@
   <l:input name="name"/>
   <l:input name="price"/>
   <l:input name="calories"/>
-  <br/><form:button value="add">Add</form:button>
+  <br/><form:button value="add"><fmt:message key="label.form.add" /></form:button>
 </form:form>
 
 
