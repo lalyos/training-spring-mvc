@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:p="http://www.springframework.org/schema/p"
+  xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+	
+	<!-- Root Context: defines shared resources visible to all other web components -->
+		
+    <bean class="com.epam.mvc.domain.Food" 
+      p:name="pácál" p:price="650" p:calories="1100"/>
+
+    <bean class="com.epam.mvc.domain.Food" 
+      p:name="pálácsinta" p:price="300" p:calories="300"/>
+
+    <bean class="com.epam.mvc.domain.Food" 
+      p:name="pangalaktikus gegepukkaszto" p:price="750" p:calories="150"/>
+</beans>
