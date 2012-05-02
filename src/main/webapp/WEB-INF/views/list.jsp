@@ -1,11 +1,11 @@
 <%@taglib tagdir="/WEB-INF/tags" prefix="l" %>
 
-<h1>list of foods</h1>
+<h1><spring:message code="title.lunch.list"/></h1>
 <table border="1">
   <tr>
-    <td>name</td>
-    <td>price</td>
-    <td>calories</td>
+    <td><spring:message code="field.label.name"/></td>
+    <td><spring:message code="field.label.price"/></td>
+    <td><spring:message code="field.label.calories"/></td>
     <td></td>
   </tr>
   <c:forEach items="${foods}" var="nextFood">
