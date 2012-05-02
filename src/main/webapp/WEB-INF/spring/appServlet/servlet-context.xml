@@ -20,7 +20,7 @@
 		<beans:property name="suffix" value=".jsp" />
 	</beans:bean>
 	
-	<context:component-scan base-package="com.epam.mvc" />
+	<context:component-scan base-package="com.github.lalyos.mvc" />
 	
 	<beans:bean id="messageSource" class="org.springframework.context.support.ReloadableResourceBundleMessageSource"
      p:basename="WEB-INF/messages"  p:cacheSeconds="10" />

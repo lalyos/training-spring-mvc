@@ -5,12 +5,12 @@
 	
 	<!-- Root Context: defines shared resources visible to all other web components -->
 		
-    <bean class="com.epam.mvc.domain.Food" 
+    <bean class="com.github.lalyos.domain.Food" 
       p:name="pácál" p:price="650" p:calories="1100"/>
 
-    <bean class="com.epam.mvc.domain.Food" 
+    <bean class="com.github.lalyos.domain.Food" 
       p:name="pálácsinta" p:price="300" p:calories="300"/>
 
-    <bean class="com.epam.mvc.domain.Food" 
+    <bean class="com.github.lalyos.domain.Food" 
       p:name="pangalaktikus gegepukkaszto" p:price="750" p:calories="150"/>
 </beans>

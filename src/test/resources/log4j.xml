@@ -11,30 +11,35 @@
 	</appender>
 	
 	<!-- Application Loggers -->
-	<logger name="com.epam.mvc">
+	<logger name="com.github.lalyos">
 		<level value="info" />
 	</logger>
 	
 	<!-- 3rdparty Loggers -->
 	<logger name="org.springframework.core">
 		<level value="info" />
-	</logger>	
+	</logger>
 	
 	<logger name="org.springframework.beans">
 		<level value="info" />
 	</logger>
 	
-	<logger name="org.springframework.context">
-		<level value="info" />
-	</logger>
+  <logger name="org.springframework.context">
+    <level value="info" />
+  </logger>
+
+  <logger name="org.springframework.context.annotation">
+    <level value="trace" />
+  </logger>
+  
 
 	<logger name="org.springframework.web">
-		<level value="info" />
+		<level value="debug" />
 	</logger>
 
 	<!-- Root Logger -->
 	<root>
-		<priority value="info" />
+		<priority value="warn" />
 		<appender-ref ref="console" />
 	</root>
 	

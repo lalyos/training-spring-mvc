@@ -1,4 +1,4 @@
-package com.epam.mvc;
+package com.github.lalyos.mvc;
 
 import java.text.DateFormat;
 import java.util.Date;

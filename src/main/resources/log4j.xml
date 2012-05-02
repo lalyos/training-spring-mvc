@@ -11,7 +11,7 @@
 	</appender>
 	
 	<!-- Application Loggers -->
-	<logger name="com.epam.mvc">
+	<logger name="com.github.lalyos">
 		<level value="info" />
 	</logger>
 	

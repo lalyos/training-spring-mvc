@@ -1,4 +1,4 @@
-package com.epam.mvc.domain;
+package com.github.lalyos.domain;
 
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
