@@ -31,10 +31,10 @@
 
 
 <form:form modelAttribute="food" action="${formUrl}" method="post">
-  <br/>name:<form:input path="name"/><form:errors path="name" cssClass="error" />
-  <br/>price:<form:input path="price"/><form:errors path="price" cssClass="error"/>
-  <br/>calories:<form:input path="calories"/><form:errors path="calories" cssClass="error"/>
-  <form:button value="add">Add</form:button>
+  <l:input name="name"/>
+  <l:input name="price"/>
+  <l:input name="calories"/>
+  <br/><form:button value="add">Add</form:button>
 </form:form>
 
 
