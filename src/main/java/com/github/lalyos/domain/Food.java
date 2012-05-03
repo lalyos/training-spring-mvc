@@ -7,7 +7,9 @@ import javax.validation.constraints.Size;
 import org.hibernate.validator.constraints.Length;
 import org.hibernate.validator.constraints.NotEmpty;
 import org.hibernate.validator.constraints.Range;
+import org.hibernate.validator.constraints.ScriptAssert;
 
+@ScriptAssert(lang="javascript", script="_this.calories > _this.price", message="calories should be bigger than price ;)")
 public class Food {
     
     @Range(min=100, max=2000)
