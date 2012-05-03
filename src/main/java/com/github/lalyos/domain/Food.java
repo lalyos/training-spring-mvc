@@ -1,5 +1,7 @@
 package com.github.lalyos.domain;
 
+import java.util.Collection;
+
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
@@ -8,6 +10,8 @@ import org.hibernate.validator.constraints.Length;
 import org.hibernate.validator.constraints.NotEmpty;
 import org.hibernate.validator.constraints.Range;
 import org.hibernate.validator.constraints.ScriptAssert;
+
+import flexjson.JSONSerializer;
 
 @ScriptAssert(lang="javascript", script="_this.calories > _this.price", message="calories should be bigger than price ;)")
 public class Food {
@@ -41,5 +45,13 @@ public class Food {
         this.price = price;
     }
     
+    public String toJson() {
+        return new JSONSerializer().exclude("*.class").serialize(this);
+    }
+
+    public static String toJsonArray(Collection<Food> collection) {
+        return new JSONSerializer().exclude("*.class").serialize(collection);
+    }
+
 
 }

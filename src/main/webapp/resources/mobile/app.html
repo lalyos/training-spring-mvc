@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>
+        </title>
+        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.css" />
+        <link rel="stylesheet" href="my.css" />
+        <style>
+            /* App custom styles */
+        </style>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js">
+        </script>
+        <script src="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.js">
+        </script>
+    </head>
+    <body>
+        <div data-role="page" id="page1">
+            <div id="content" data-role="content">
+            </div>
+        </div>
+        <script>
+	$.getJSON('http://localhost:8080/lunch/list', function(data) {
+	  var items = [];
+	  items.push('<li data-role="list-divider" role="heading">FoodList</li>');
+	  $.each(data, function() {
+		var darido = this;
+		console.log("next food ..");
+		var nextItem = '<li data-theme="c"><a href="#page1" data-transition="slide">' 
+		+ darido.name + " : " + darido.price  
+		+  '</a></li>'
+		console.log("nextItem" + nextItem);
+	    items.push(nextItem);
+	  }
+	);
+
+	  $('<ul />', {
+		'id' : 'myList',
+		'data-divider-theme' : 'b',
+		'data-inset' : 'true',
+		'data-role' :"listview",
+	    html: items.join('')
+	  }).appendTo('#content');
+
+	console.log("AFTER append");
+	$("#myList").listview();
+
+	});
+
+
+	</script>
+    </body>
+</html>
