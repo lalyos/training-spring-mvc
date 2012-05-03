@@ -10,6 +10,9 @@
 .error{
   color:red;
 }
+.flash{
+  background-color: lightGreen;
+  border: 2px solid green;}
 </style>
 </head>
 <body>

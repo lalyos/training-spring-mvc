@@ -1,6 +1,11 @@
 <%@taglib tagdir="/WEB-INF/tags" prefix="l" %>
 
 <h1><spring:message code="title.lunch.list"/></h1>
+
+<c:if test="${not empty flash }" >
+<div class="flash">${flash}</div>
+</c:if>
+
 <table border="1">
   <tr>
     <td><spring:message code="field.label.name"/></td>
