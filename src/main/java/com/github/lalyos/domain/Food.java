@@ -13,7 +13,7 @@ import org.hibernate.validator.constraints.ScriptAssert;
 
 import flexjson.JSONSerializer;
 
-@ScriptAssert(lang="javascript", script="_this.calories > _this.price", message="calories should be bigger than price ;)")
+@ScriptAssert(lang="javascript", script="_this.calories > _this.price", message="{croosfield.error}")
 public class Food {
     
     @Range(min=100, max=2000)
