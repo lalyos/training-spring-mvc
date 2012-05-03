@@ -18,11 +18,13 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.FieldError;
+import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.github.lalyos.domain.Food;
@@ -36,17 +38,12 @@ public class LunchController {
     
     private SimpleDateFormat sdf = new SimpleDateFormat("yyyy.MM.dd HH:mm");
     @RequestMapping("go")
-    public String go(Model model ) {
+    public String go(Model model ) throws ParseException {
         
         Date now = new Date();
         long minutes = 0;
-        try {
-            Date lunch = sdf.parse("2012.05.02 12:00");
-            minutes = (lunch.getTime() - now.getTime()) / 60000;
-        } catch (ParseException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
-        }
+        Date lunch = sdf.parse("2012.05.03x 12:00");
+        minutes = (lunch.getTime() - now.getTime()) / 60000;
         
         model.addAttribute("minutes", minutes);
         
@@ -90,6 +87,13 @@ public class LunchController {
                 iterator.remove();
             }
         }
+    }
+    
+    @ExceptionHandler(ParseException.class)
+    public ModelAndView exception(ParseException e) {
+        ModelAndView ret = new ModelAndView("exception");
+        ret.addObject("exception", e);
+        return ret;
     }
     
 
