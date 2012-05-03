@@ -1,7 +1,6 @@
 <%@taglib tagdir="/WEB-INF/tags" prefix="l" %>
 
 <h1><spring:message code="title.lunch.list"/></h1>
-
 <c:if test="${not empty flash }" >
 <div class="flash">${flash}</div>
 </c:if>
@@ -35,6 +34,7 @@
 
 
 <form:form modelAttribute="food" action="${formUrl}" method="post">
+  <form:errors path="*" cssClass="error" />
   <l:input name="name"/>
   <l:input name="price"/>
   <l:input name="calories"/>
