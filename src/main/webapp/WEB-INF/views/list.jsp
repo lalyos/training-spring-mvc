@@ -34,7 +34,7 @@
 
 
 <form:form modelAttribute="food" action="${formUrl}" method="post">
-  <form:errors path="*" cssClass="error" />
+  <form:errors cssClass="error"  />
   <l:input name="name"/>
   <l:input name="price"/>
   <l:input name="calories"/>
