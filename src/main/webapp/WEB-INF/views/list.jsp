@@ -6,15 +6,18 @@
 </c:if>
 
 <table border="1">
+  <thead>
   <tr>
-    <td><spring:message code="field.label.name"/></td>
-    <td><spring:message code="field.label.price"/></td>
-    <td><spring:message code="field.label.calories"/></td>
-    <td></td>
+    <th><spring:message code="field.label.name"/></th>
+    <th><spring:message code="field.label.price"/></th>
+    <th><spring:message code="field.label.calories"/></th>
+    <th></th>
   </tr>
+  </thead>
+  <tbody>
   <c:forEach items="${foods}" var="nextFood">
   <c:url var="deleteUrl" value="delete/${nextFood.name}" />
-  
+    
     <tr>
       <td>${nextFood.name}</td>
       <td>${nextFood.price}</td>
@@ -27,6 +30,7 @@
       </td>
     </tr>
   </c:forEach>
+  </tbody>
 </table>  
   
   <div>
