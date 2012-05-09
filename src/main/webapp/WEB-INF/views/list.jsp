@@ -5,7 +5,7 @@
 <div class="flash">${flash}</div>
 </c:if>
 
-<table border="1">
+<table class="table table-striped table-condensed">
   <thead>
   <tr>
     <th><spring:message code="field.label.name"/></th>
@@ -24,7 +24,9 @@
       <td>${nextFood.calories}</td>
       <td>        
         <form action="${deleteUrl}" method="POST"> 
-            <input type="submit" value="X"> 
+            <button type="submit" class="btn btn-danger">
+            <i class="icon-trash icon-white"></i>
+            Delete</button>
             <input name="_method" value="DELETE" type="hidden">
         </form>
       </td>
@@ -37,12 +39,17 @@
   <c:url var="formUrl" value="add"></c:url>
 
 
-<form:form modelAttribute="food" action="${formUrl}" method="post">
+<form:form modelAttribute="food" action="${formUrl}" method="post" cssClass="form-horizontal">
+<fieldset>
   <form:errors cssClass="error"  />
   <l:input name="name"/>
   <l:input name="price"/>
   <l:input name="calories"/>
-  <br/><form:button value="add"><fmt:message key="label.form.add" /></form:button>
+  
+  <div class="form-action">
+    <button type="submit" class="btn btn-primary"><fmt:message key="label.form.add" /></button>
+  </div>
+  </fieldset>
 </form:form>
 
 
