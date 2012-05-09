@@ -1,0 +1,25 @@
+// Spring Roo 1.3.0.BUILD-SNAPSHOT [rev 566af23] log opened at 2012-05-09 16:38:26
+version
+// [failed] version
+version -jaime
+// [failed] version -jaime
+version jaime
+// [failed] version jaime
+version jaime
+// [failed] version jaime
+exit
+// Spring Roo 1.3.0.BUILD-SNAPSHOT [rev 566af23] log closed at 2012-05-09 16:40:02
+// Spring Roo 1.3.0.BUILD-SNAPSHOT [rev 566af23] log opened at 2012-05-09 16:40:02
+// [failed] exit
+// Spring Roo 1.3.0.BUILD-SNAPSHOT [rev 566af23] log closed at 2012-05-09 16:40:02
+// Spring Roo 1.2.1.RELEASE [rev 6eae723] log opened at 2012-05-09 16:40:12
+version
+version jaime
+version -jaime
+help
+version -jaime
+version jaime
+exit
+// Spring Roo 1.2.1.RELEASE [rev 6eae723] log closed at 2012-05-09 16:41:25
+// Spring Roo 1.1.5.RELEASE [rev d3a68c3] log opened at 2012-05-09 16:41:35
+version jaime

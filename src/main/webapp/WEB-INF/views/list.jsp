@@ -56,26 +56,4 @@
 
 </div>
 
-
-  <c:set var="mapToDebug" scope="request"  value="${param}" />
-<jsp:include page="/WEB-INF/views/debugMap.jsp" >
-<jsp:param name="mapTitle" value="params"/>
-</jsp:include>
-
-  <c:set var="mapToDebug" scope="request"  value="${requestScope}" />
-<jsp:include page="/WEB-INF/views/debugMap.jsp" >
-<jsp:param name="mapTitle" value="request"/>
-</jsp:include>
-  
-  
-
-<c:set var="mapToDebug" scope="request"  value="${sessionScope}" />
-<jsp:include page="/WEB-INF/views/debugMap.jsp" >
-<jsp:param name="mapTitle" value="sessionScope"/>
-</jsp:include>
-
-<c:set var="mapToDebug" scope="request"  value="${applicationScope}" />
-<jsp:include page="/WEB-INF/views/debugMap.jsp" >
-<jsp:param name="mapTitle" value="application"/>
-</jsp:include>
   

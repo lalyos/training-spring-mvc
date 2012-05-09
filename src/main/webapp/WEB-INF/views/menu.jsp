@@ -1,3 +1,5 @@
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<c:url value="/login" var="loginUrl" />
     <div class="navbar navbar-fixed-top">
       <div class="navbar-inner">
         <div class="container">
@@ -9,11 +11,12 @@
           <a class="brand" href="#">Project name</a>
           <div class="nav-collapse">
             <ul class="nav">
-              <li class="active"><a href="#">Home</a></li>
-              <li><a href="#about">About</a></li>
-              <li><a href="#contact">Contact</a></li>
+              <li class="active"><a href="#">${not empty sessionScope.username ? sessionScope.username : 'Anonym'}</a></li>
+              <li><a href="${loginUrl}">Login</a></li>
             </ul>
           </div><!--/.nav-collapse -->
+          
+          
         </div>
       </div>
     </div>

@@ -91,5 +91,8 @@
 
 
 
+  <listener>
+    <listener-class>com.epam.kaka.MyLostener</listener-class>
+  </listener>
 
 </web-app>
